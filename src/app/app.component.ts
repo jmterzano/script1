@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'script1';
+
+  usuario={
+    email:'',
+    password:''
+  }
+
+ Ingresar(){
+   console.log(this.usuario);
+ }
 }

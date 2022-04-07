@@ -1,0 +1,23 @@
+<body>
+    <header>
+        <h1>Login LAB IV</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="login/login-access.php" method="post">
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" name="login_txt" type="text" placeholder="Ingrese su usuario" >
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="password_txt" type="password" placeholder="Ingrese su contraseña">
+                <button class="submit_class" type="submit" form="login_form">Entrar</button>
+            </div>
+            <div class="info_div">
+                <p>Todavia no estas registrado? <a href="register/reg-form.php">Registrate!</a></p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Developer <a href="#">JMT_Code&trade;</a></p>
+    </footer>
+  </body>
+  <router-outlet></router-outlet>
