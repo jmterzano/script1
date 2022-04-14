@@ -16,6 +16,16 @@ import { MemotestComponent } from './pages/memotest/memotest.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 
+const firebaseConfig= {
+  apiKey: "AIzaSyAKeo6ffO69qqQ-41iRoqaaHXPrVXZ6Jks",
+  authDomain: "tp-salajuegos.firebaseapp.com",
+  projectId: "tp-salajuegos",
+  storageBucket: "tp-salajuegos.appspot.com",
+  messagingSenderId: "658238771075",
+  appId: "1:658238771075:web:c6f5552dc0f869bcb6f0b6",
+  measurementId: "G-ESTWFX1FR6"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +42,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
