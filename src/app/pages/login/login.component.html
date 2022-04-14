@@ -6,13 +6,16 @@
         <form id="login_form" class="form_class" action="login/login-access.php" method="post">
             <div class="form_div">
                 <label>Login:</label>
-                <input class="field_class" name="login_txt" type="text" placeholder="Ingrese su usuario" >
+                <input class="field_class" name="login_txt" type="text" placeholder="Ingrese su usuario" [(ngModel)]="usuario.email">
                 <label>Password:</label>
-                <input id="pass" class="field_class" name="password_txt" type="password" placeholder="Ingrese su contraseña">
-                <button class="submit_class" type="submit" form="login_form">Entrar</button>
+                <input id="pass" class="field_class" name="password_txt" type="password" placeholder="Ingrese su contraseña" [(ngModel)]="usuario.password">
+                <button class="submit_class" (click)="Ingresar()" type="submit" form="login_form">Entrar</button>
+
+                <button class="submit_class" (click)="ObtenerUsuarioLogueado()" type="submit" form="login_form">Usuario Logueado</button>
+                <button class="submit_class" (click)="Salir()"  type="submit" form="login_form">Logout</button>
             </div>
             <div class="info_div">
-                <p>Todavia no estas registrado? <a href="register/reg-form.php">Registrate!</a></p>
+                <p>Todavia no estas registrado? <a routerLink="/registro">Registrate!</a></p>
             </div>
         </form>
     </main>

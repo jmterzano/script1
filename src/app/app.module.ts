@@ -13,6 +13,8 @@ import { ErrorComponent } from './pages/error/error.component';
 import { JuegosComponent } from './pages/juegos/juegos.component';
 import { TatetiComponent } from './pages/tateti/tateti.component';
 import { MemotestComponent } from './pages/memotest/memotest.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { MemotestComponent } from './pages/memotest/memotest.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

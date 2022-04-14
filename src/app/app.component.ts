@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,15 @@ export class AppComponent {
     password:''
   }
 
+  constructor(private authService: AuthService){
+
+  }
+
  Ingresar(){
    console.log(this.usuario);
+   const{email,password}=this.usuario;
+   this.authService.register(email,password).then(res => {
+     console.log("se registro: ",res);
+   })
  }
 }
